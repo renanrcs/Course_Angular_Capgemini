@@ -8,5 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class SecondComponentComponent {
 
   name = "Renan";
+  dataNascimento = "1991/10/16";
 
 }
