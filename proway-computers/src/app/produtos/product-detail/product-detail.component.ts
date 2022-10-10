@@ -1,4 +1,7 @@
+import { ProdutosService } from './../../produtos.service';
 import { Component, OnInit } from '@angular/core';
+import { IProduto } from 'src/app/produtos';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor() { }
+  produto: IProduto | undefined;
+  quantidade = 1;
+
+  constructor(
+    private produtosService: ProdutosService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    const routeParams = this.route.snapshot.paramMap;
+    const produtoId = Number(routeParams.get('id'));
+    this.produto = this.produtosService.getOne(produtoId);
   }
 
 }
