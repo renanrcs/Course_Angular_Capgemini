@@ -7,7 +7,7 @@
     <ul>
       <li><a>Produtos</a></li>
       <li><a><i class="fa-solid fa-cart-shopping">Carrinho
-        <span class="badge-carrinho">0</span>
+        <span class="badge-carrinho">{{ carrinhoService.getCar().length }}</span>
       </i></a>
       </li>
       <li><a>Contato</a></li>
@@ -19,7 +19,7 @@
   </nav>
 
   <form class="search-form">
-    <input type="text" name="search">
+    <input type="text">
     <i class="fa-solid fa-magnifying-glass"></i>
   </form>
 </div>
