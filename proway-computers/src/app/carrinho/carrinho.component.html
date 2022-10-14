@@ -16,10 +16,10 @@
   </ul>
 
 <h2 class="cart-total">
-  Total: {{ total }}
+  Total: {{ total | currency: "BRL"}}
 </h2>
 
-<button class="buy-button" (click)="compar()">Comprar</button>
+<button class="buy-button" (click)="comprar()">Comprar</button>
 
 </div>
 

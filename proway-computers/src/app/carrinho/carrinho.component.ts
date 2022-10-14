@@ -1,4 +1,4 @@
-import { Router, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 import { CarrinhoService } from './../carrinho.service';
 import { Component, OnInit } from '@angular/core';
 import { IProdutoCarrinho } from '../produtos';
@@ -27,7 +27,7 @@ export class CarrinhoComponent implements OnInit {
     this.total = this.itensCarrinho.reduce((prev, curr) => prev + (curr.preco * curr.quantidade), 0);
   }
 
-  compar(){
+  comprar(){
     alert(`Parabéns, você finalizou a sua compra!`);
     this.carrinhoService.clearCar();
     this.router.navigate(["produtos"]);
