@@ -1,6 +1,0 @@
-<h2>Interração entre componentes</h2>
-<h3>Pai. O sobrenome esta definido no elemento pai: {{ sobrenome }}</h3>
-
-<h3>O nome completo é: {{ son.name }}{{ sobrenome }}</h3>
-
-<app-component-son [sobrenome]="sobrenome" (showName)="showNameComplet($event)" #son></app-component-son>
